@@ -4,5 +4,6 @@
     <string name="app_name">WearSkeleton</string>
     <string name="hello_round">Hello Round World!</string>
     <string name="hello_square">Hello Square World!</string>
+    <string name="long_press_intro">Hello long press!</string>
 
 </resources>
