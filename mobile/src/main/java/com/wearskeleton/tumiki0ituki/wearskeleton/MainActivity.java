@@ -9,11 +9,12 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 
 /**
- * handbeld side MainActivity.
+ * handheld side MainActivity.
  */
 public class MainActivity extends Activity implements OnClickListener {
 
     private Button mBuntton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,4 +51,5 @@ public class MainActivity extends Activity implements OnClickListener {
     public void onClick(View view) {
 
     }
+
 }

@@ -2,13 +2,17 @@ package com.wearskeleton.tumiki0ituki.wearskeleton;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.wearable.view.DismissOverlayView;
 import android.support.wearable.view.WatchViewStub;
+import android.view.View;
 import android.widget.TextView;
 
 /**
  * wearable side MainActivity.
  */
 public class MainActivity extends Activity {
+
+    private DismissOverlayView dismissOverlayView;
 
     private TextView mTextView;
 
@@ -18,13 +22,20 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
-        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
-            @Override
-            public void onLayoutInflated(WatchViewStub stub) {
-                mTextView = (TextView) stub.findViewById(R.id.text);
-            }
-        });
+        dismissOverlayView = (DismissOverlayView) findViewById(R.id.dismiss_overlay);
+
+//        final WatchViewStub stub = (WatchViewStub) findViewById(R.id.watch_view_stub);
+//        stub.setOnLayoutInflatedListener(new WatchViewStub.OnLayoutInflatedListener() {
+//            @Override
+//            public void onLayoutInflated(WatchViewStub stub) {
+//                mTextView = (TextView) stub.findViewById(R.id.text);
+//            }
+//        });
 
     }
+
+    public void onLayoutClick(View view) {
+        dismissOverlayView.show();
+    }
+
 }
